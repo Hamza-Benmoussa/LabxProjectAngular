@@ -5,6 +5,8 @@ import {TestAnalyseComponent} from "./test-analyse/test-analyse.component";
 import {AnalyseComponent} from "./analyse/analyse.component";
 import {EchantillonComponent} from "./echantillon/echantillon.component";
 import {PlanificationComponent} from "./planification/planification.component";
+import {HomeComponent} from "./home/home.component";
+import {NavComponent} from "./nav/nav.component";
 
 const routes: Routes = [
   {path : "type-analyse" , component : TypeAnalyseComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path : "analyse" , component : AnalyseComponent},
   {path : "echantillon" , component : EchantillonComponent},
   {path : "planification" , component : PlanificationComponent},
+  {path : "" , component : HomeComponent},
+  {path : "nav" , component : NavComponent},
 ];
 
 @NgModule({

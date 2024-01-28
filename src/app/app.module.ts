@@ -8,6 +8,8 @@ import { TypeAnalyseComponent } from './type-analyse/type-analyse.component';
 import { AnalyseComponent } from './analyse/analyse.component';
 import { EchantillonComponent } from './echantillon/echantillon.component';
 import { PlanificationComponent } from './planification/planification.component';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PlanificationComponent } from './planification/planification.component'
     TypeAnalyseComponent,
     AnalyseComponent,
     EchantillonComponent,
-    PlanificationComponent
+    PlanificationComponent,
+    HomeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
