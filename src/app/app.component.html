@@ -24,19 +24,22 @@
         <li class="nav-item"><a class="nav-link active"  href="#" style="color: rgba(224,217,217,0.9);margin-left: 1px;">Utilisateur</a></li>
         <li class="nav-item"><a class="nav-link active"  href="#" style="color: rgba(224,217,217,0.9);">Patient</a></li>
         <li class="nav-item"><a class="nav-link active"  href="#" style="color: rgba(224,217,217,0.9);">Reactif</a></li>
-        <li class="nav-item"><a class="nav-link active"  href="Planification/PlanificationPage.html" style="color: rgba(224,217,217,0.9);">Planification</a></li>
+        <li class="nav-item"><a class="nav-link active"  routerLink="/planification" style="color: rgba(224,217,217,0.9);">Planification</a></li>
         <li class="nav-item"></li>
         <li class="nav-item"><a class="nav-link"  href="#" style="color: rgba(224,217,217,0.9);">Material</a></li>
-        <li class="nav-item"><a class="nav-link"  href="Echantillon/EchantillonPage.html" style="color: rgba(224,217,217,0.9);">Echantillon</a></li>
-        <li class="nav-item"><a class="nav-link" data-bss-hover-animate="rubberBand" href="Analyse/AnalysePage.html" style="color: rgba(224,217,217,0.9);">Analyse</a></li>
-        <li class="nav-item"><a class="nav-link" data-bss-hover-animate="rubberBand" href="#" style="color: rgba(224,217,217,0.9);">Norme</a></li>
-        <li class="nav-item"><a class="nav-link" data-bss-hover-animate="rubberBand" href="TypeAnalyse/TypeAnalysePage.html" style="color: rgba(224,217,217,0.9);">TpAnalyse</a></li>
-        <li class="nav-item"><a class="nav-link" data-bss-hover-animate="rubberBand" href="TestAnalyse/TestAnalysePage.html" style="color: rgba(224,217,217,0.9);">TestAnalyse</a></li>
+        <li class="nav-item"><a class="nav-link"  routerLink="/echantillon" style="color: rgba(224,217,217,0.9);">Echantillon</a></li>
+        <li class="nav-item"><a class="nav-link"  routerLink="/analyse" style="color: rgba(224,217,217,0.9);">Analyse</a></li>
+        <li class="nav-item"><a class="nav-link"  href="#" style="color: rgba(224,217,217,0.9);">Norme</a></li>
+        <li class="nav-item"><a class="nav-link"  routerLink="/type-analyse" style="color: rgba(224,217,217,0.9);">TpAnalyse</a></li>
+        <li class="nav-item"><a class="nav-link"  routerLink="/test-analyse" style="color: rgba(224,217,217,0.9);">TestAnalyse</a></li>
       </ul>
       <p class="ms-auto navbar-text actions" data-bss-hover-animate="rubberBand" style="margin-bottom: -12px;margin-top: -11px;"><a class="login" href="login.html" style="color: rgba(224,217,217,0.9);">Log In</a> </p>
     </div>
   </div>
 </nav>
+<router-outlet>
+
+</router-outlet>
 <div class="container" style="margin-top: 100px;">
   <div class="row">
     <div class="col-md-6">
@@ -56,3 +59,4 @@
 </body>
 
 </html>
+
