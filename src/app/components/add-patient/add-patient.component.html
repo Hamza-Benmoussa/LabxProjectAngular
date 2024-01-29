@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <form class="card shadow mb-3" style="margin-right: 444px; margin-left: 326px; padding: 0;">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 fw-bold">Ajouter Patient</p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="nom"><strong>Nom</strong></label>
+                        <input type="text" class="form-control" id="nom" required [(ngModel)]="patient.nom" name="nom">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="prenom"><strong>Prénom</strong></label>
+                        <input type="text" class="form-control" id="prenom" required [(ngModel)]="patient.prenom" name="prenom">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="sexe"><strong>Genre</strong></label>
+                        <input type="text" class="form-control" id="sexe" required [(ngModel)]="patient.sexe" name="sexe">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="dateNaissance"><strong>Date de naissance</strong></label>
+                        <input type="date" class="form-control" id="dateNaissance" required [(ngModel)]="patient.dateNaissance" name="dateNaissance">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="adresse"><strong>Adresse</strong></label>
+                        <input type="text" class="form-control" id="adresse" required [(ngModel)]="patient.adresse" name="adresse">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+                    <div class="mb-3">
+                        <label class="form-label" for="numeroTelephone"><strong>Numéro de téléphone</strong></label>
+                        <input type="tel" class="form-control" id="numeroTelephone" required [(ngModel)]="patient.numeroTelephone" name="numeroTelephone">
+                    </div>
+                </div>
+            </div>
+            <button (click)="savePatient()" class="btn btn-success">Submit</button>
+            <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+        </div>
+    </form>
+    <div *ngIf="submitted" class="text-center">
+        <h4>Patient submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newPatient()">Add Another Patient</button>
+    </div>
+</div>

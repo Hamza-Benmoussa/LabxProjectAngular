@@ -10,7 +10,11 @@ import { EchantillonComponent } from './echantillon/echantillon.component';
 import { PlanificationComponent } from './planification/planification.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
-
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
+import { PatientsListComponent } from './components/patients-list/patients-list.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +24,16 @@ import { NavComponent } from './nav/nav.component';
     EchantillonComponent,
     PlanificationComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    AddPatientComponent,
+    PatientDetailsComponent,
+    PatientsListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

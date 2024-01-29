@@ -1,0 +1,37 @@
+<div class="list row">
+    <div class="col-md-8">
+      <h4>Patients List</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de Naissance</th>
+            <th>Genre</th>
+            <th>Adresse</th>
+            <th>Numéro de téléphone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients; let i = index">
+            <td>{{ patient.nom }}</td>
+            <td>{{ patient.prenom }}</td>
+            <td>{{ patient.dateNaissance }}</td>
+            <td>{{ patient.sexe }}</td>
+            <td>{{ patient.adresse }}</td>
+            <td>{{ patient.numeroTelephone }}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="editPatient(i)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deletePatient(patient.id)">Delete</button>
+                <!-- <button class="btn btn-success btn-sm" (click)="updatePatient(patient)">Update</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-success" (click)="goToAddPatient()">Add Patient</button>
+    </div>
+  </div>
+  

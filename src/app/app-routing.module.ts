@@ -7,15 +7,22 @@ import {EchantillonComponent} from "./echantillon/echantillon.component";
 import {PlanificationComponent} from "./planification/planification.component";
 import {HomeComponent} from "./home/home.component";
 import {NavComponent} from "./nav/nav.component";
+import { PatientsListComponent } from './components/patients-list/patients-list.component';
+import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
 
 const routes: Routes = [
-  {path : "type-analyse" , component : TypeAnalyseComponent},
-  {path : "test-analyse" , component : TestAnalyseComponent},
-  {path : "analyse" , component : AnalyseComponent},
-  {path : "echantillon" , component : EchantillonComponent},
-  {path : "planification" , component : PlanificationComponent},
-  {path : "" , component : HomeComponent},
-  {path : "nav" , component : NavComponent},
+  // {path : "type-analyse" , component : TypeAnalyseComponent},
+  // {path : "test-analyse" , component : TestAnalyseComponent},
+  // {path : "analyse" , component : AnalyseComponent},
+  // {path : "echantillon" , component : EchantillonComponent},
+  // {path : "planification" , component : PlanificationComponent},
+  // {path : "" , component : HomeComponent},
+  // {path : "nav" , component : NavComponent},
+  { path: '', redirectTo: 'patients', pathMatch: 'full' },
+  { path: 'patients', component: PatientsListComponent },
+  { path: 'patients/:id', component: PatientDetailsComponent },
+  { path: 'add', component: AddPatientComponent },
 ];
 
 @NgModule({
