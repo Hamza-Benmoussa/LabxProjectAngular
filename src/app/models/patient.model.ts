@@ -8,4 +8,5 @@ export class Patient {
     adresse?: string; 
     numeroTelephone?: string;
     deleted?: boolean;
+    //add echantillon
 }
