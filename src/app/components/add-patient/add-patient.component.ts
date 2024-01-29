@@ -89,7 +89,6 @@ export class AddPatientComponent implements OnInit {
   }
 
   savePatient(): void {
-    // Here, you can add more robust form validation before submitting
     if (this.validateForm()) {
       this.patientService.create(this.patient)
         .subscribe({
