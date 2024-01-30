@@ -9,6 +9,7 @@ import {HomeComponent} from "./home/home.component";
 import {NavComponent} from "./nav/nav.component";
 import { PatientsListComponent } from './components/patients-list/patients-list.component';
 import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { UpdatePatientComponent } from './components/update-patient/update-patient.component';
 
 const routes: Routes = [
   {path : "" , component : HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path : "planification" , component : PlanificationComponent},
   //{ path: '', redirectTo: 'patients', pathMatch: 'full' },
   { path: 'patients', component: PatientsListComponent },
- // { path: 'add', component: AddPatientComponent },
+  { path: 'patients/addPatient', component: AddPatientComponent },
+  { path: 'patients/update/:id', component: UpdatePatientComponent }, // Route for updating a patient
 ];
 
 @NgModule({

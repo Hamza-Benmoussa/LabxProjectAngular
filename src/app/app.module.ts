@@ -15,6 +15,7 @@ import { PatientDetailsComponent } from './components/patient-details/patient-de
 import { PatientsListComponent } from './components/patients-list/patients-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdatePatientComponent } from './components/update-patient/update-patient.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     AddPatientComponent,
     PatientDetailsComponent,
-    PatientsListComponent
+    PatientsListComponent,
+    UpdatePatientComponent
   ],
   imports: [
     BrowserModule,

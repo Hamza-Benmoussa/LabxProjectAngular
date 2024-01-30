@@ -44,6 +44,7 @@ export class PatientsListComponent implements OnInit {
   }
 
   editPatient(index: number): void {
+    // pass the id and after that should be get the info of the patient and redirect him to updatePatient components
     // You can navigate to an edit page with patient ID or implement inline editing
     console.log('Editing patient:', this.patients[index]);
   }
