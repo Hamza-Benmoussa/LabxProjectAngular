@@ -1,11 +1,9 @@
-export class Patient {
-  constructor(
-    public id: number,
-    public nom: string,
-    public prenom: string,
-    public dateNaissance: string,
-    public sexe: string,
-    public adresse: string,
-    public numeroTelephone: string
-  ) {}
+export interface Patient {
+  id: number;
+  nom: string;
+  prenom: string;
+  dateNaissance: string;
+  sexe: string;
+  adresse: string;
+  numeroTelephone: string;
 }

@@ -3,7 +3,7 @@ import { EchantillonService } from "../../../service/echantillon.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
-import { Echantillon } from "../../../entity/echantillon";
+import { Echantillon } from "../../../entity/Echantillon";
 
 @Component({
   selector: 'app-update-echantillon',

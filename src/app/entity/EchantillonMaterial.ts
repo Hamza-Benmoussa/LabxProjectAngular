@@ -1,22 +1,14 @@
-// In your Angular application
-import {Echantillon} from "./echantillon";
-import {MaterialEchan} from "./MaterialEchan";
+import {Echantillon} from "./Echantillon";
 
-
-
-export class EchantillonMaterial {
-  id: number;
+export interface EchantillonMaterial {
   echantillon: Echantillon;
-  materielEchan: MaterialEchan;
+  materielEchan: {
+    id: number;
+    nomEchan: string;
+    quantiteStockEhcna: number;
+    dateExpirationEchan: string;
+    fournisseurNom: string;
+  };
   quantity: number;
-  deleted: boolean;
-
-  // Assuming you need a constructor
-  constructor(id: number, echantillonId: Echantillon, materielEchanId: MaterialEchan, quantity: number, deleted: boolean) {
-    this.id = id;
-    this.echantillon = echantillonId;
-    this.materielEchan = materielEchanId;
-    this.quantity = quantity;
-    this.deleted = deleted;
-  }
 }
+

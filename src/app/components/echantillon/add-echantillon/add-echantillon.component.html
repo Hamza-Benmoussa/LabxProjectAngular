@@ -1,38 +1,60 @@
-<form #addechantillon=ngForm (ngSubmit)="addEchantillon(addechantillon)">
+<!-- add-echantillon.component.html -->
+
+<form (ngSubmit)="onSubmit()">
   <div class="card shadow mb-3" style="margin-right: 444px; margin-top: 100px; margin-left: 326px; padding-top: 0px; margin-bottom: 0px; padding-bottom: 0px;">
     <div class="card-header py-3">
-      <p class="text-primary m-0 fw-bold">Ajouter Echantilllon</p>
+      <p class="text-primary m-0 fw-bold">Ajouter Echantillon</p>
     </div>
     <div class="card-body">
-      <div class="mb-3">
-        <label class="form-label" for="nomAnalyse"><strong>Nom Analyse</strong></label>
-        <input class="shadow form-control" type="text"  id="nomAnalyse" [(ngModel)]="echantillon.nomAnalyse" placeholder="Nom Analyse" required>
-      </div>
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="datePrelevement">Date de Prélèvement :</label>
+              <input class="shadow form-control" type="text" id="datePrelevement" name="datePrelevement" formControlName="datePrelevement" placeholder="Date Prelevement" required>
+            </div>
 
-      <div class="mb-3">
-        <label class="form-label"><strong>Patient</strong></label>
-        <select class="shadow form-select" id="patientId" [(ngModel)]="echantillon.patient.nom"  placeholder="Patient">
-          <option *ngFor="let patient of patients" [ngValue]="patient.id">{{ patient.nom }}</option>
-        </select>
-      </div>
+            <div class="form-group">
+              <label >Patient :</label>
+              <select class="shadow form-select"  name="patient" formControlName="patient" placeholder="Patient">
+                <option *ngFor="let patient of patients" [value]="patients">{{ patient.nom }}</option>
+              </select>
+            </div>
 
-      <div class="mb-3">
-        <label class="form-label"><strong>Patient</strong></label>
-        <select class="shadow form-select" id="material" [(ngModel)]="echantillon.echantillonMaterials"  placeholder="Patient">
-          <option *ngFor="let material of materials" [ngValue]="material.id">{{ material.nomechan }}</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="datePrelevement"><strong>Quantity material</strong></label>
-        <input class="shadow form-control"  type="number" id="Quantity material" [(ngModel)]="echantillon." placeholder="Quantity material" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label"  for="datePrelevement"><strong>Date Prelevement</strong></label>
-        <input class="shadow form-control"  type="text" id="datePrelevement" ngModel placeholder="Date Prelevement" required>
-      </div>
+            <div class="form-group">
+              <label>Utilisateur :</label>
+              <select class="shadow form-select" name="utilisateur" formControlName="utilisateurPreleveur" placeholder="Utilisateur">
+                <option *ngFor="let utilisateurPreleveur of utilisateurPreleveur" [value]="utilisateurPreleveur">{{ utilisateurPreleveur.nom }}</option>
+              </select>
+            </div>
+          </div>
 
-      <button class="btn btn-primary btn-lg" [disabled]="addechantillon.invalid"  type="submit" style="margin-top: 10px;">Ajouter</button>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nomAnalyse">Nom Analyse :</label>
+              <input class="shadow form-control" type="text" id="nomAnalyse"  name="nomAnalyse" formControlName="nomAnalyse" placeholder="Nom Analyse" required>
+            </div>
 
+            <div class="form-group">
+              <label >Material :</label>
+              <select class="shadow form-select"  name="material" formControlName="material" placeholder="Material">
+                <option *ngFor="let materialEchan of materialEchan" [value]="materialEchan">{{ materialEchan.nomechan }}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quantityMaterial">Quantité Material :</label>
+              <input class="shadow form-control" type="number" id="quantityMaterial" formControlName="quantityMaterial" name="quantityMaterial" placeholder="Quantité Material" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-primary btn-lg" type="submit" style="margin-top: 10px;">Ajouter</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </form>

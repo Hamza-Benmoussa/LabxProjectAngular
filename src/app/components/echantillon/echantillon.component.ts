@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EchantillonService} from "../../service/echantillon.service";
 import {Router} from "@angular/router";
-import {filter, Observable} from "rxjs";
-import {Echantillon} from "../../entity/echantillon";
+import {EchantillonRequest} from "../../entity/EchantillonRequest";
 
 @Component({
   selector: 'app-echantillon',
@@ -10,8 +9,7 @@ import {Echantillon} from "../../entity/echantillon";
   styleUrls: ['./echantillon.component.css']
 })
 export class EchantillonComponent implements OnInit {
- echantillons : Echantillon[] =[] ;
-  url :string = "http://localhost:8080/api/echantillon"
+ echantillons : EchantillonRequest[] =[] ;
   constructor(private service : EchantillonService , private router : Router) { }
 
   ngOnInit(): void {

@@ -23,6 +23,16 @@ import { AddTypeComponent } from './components/type-analyse/add-type/add-type.co
 import { UpdateTypeComponent } from './components/type-analyse/update-type/update-type.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule , FormsModule} from "@angular/forms";
+import { AddPatientComponent } from './components/patient/add-patient/add-patient.component';
+import { UpdatePatientComponent } from './components/patient/update-patient/update-patient.component';
+import {PatientComponent} from './components/patient/patient.component';
+import { AddMaterialComponent } from './components/material/add-material/add-material.component';
+import { UpdateMaterialComponent } from './components/material/update-material/update-material.component';
+import { AfficherMaterialComponent } from './components/material/afficher-material/afficher-material.component';
+import {PatientService} from "./service/patient.service";
+import { AddUtilisateurComponent } from './components/utilisateur/add-utilisateur/add-utilisateur.component';
+import { UpdateUtilisateurComponent } from './components/utilisateur/update-utilisateur/update-utilisateur.component';
+import { AfficherUtilisateurComponent } from './components/utilisateur/afficher-utilisateur/afficher-utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -44,13 +54,15 @@ import {ReactiveFormsModule , FormsModule} from "@angular/forms";
     UpdateTestComponent,
     DetailsTestComponent,
     AddTypeComponent,
-    UpdateTypeComponent
+    AddPatientComponent,
+    UpdateTypeComponent,
+    UpdatePatientComponent, PatientComponent, AddMaterialComponent, UpdateMaterialComponent, AfficherMaterialComponent, AddUtilisateurComponent, UpdateUtilisateurComponent, AfficherUtilisateurComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule , FormsModule
+    ReactiveFormsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

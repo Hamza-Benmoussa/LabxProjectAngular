@@ -1,9 +1,7 @@
-export class MaterialEchan {
-  constructor(
-    public id: number,
-    public nomechan: string,
-    public quantiteStockEhcna: number,
-    public dateExpirationEchan: string,
-    public fournisseurNom: string
-  ) {}
+export interface MaterialEchan{
+  id: number;
+  nomechan: string;
+  quantiteStockEhcna: number;
+  dateExpirationEchan: string;
+  fournisseurNom: string;
 }
