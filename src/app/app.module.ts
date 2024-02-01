@@ -29,10 +29,12 @@ import {PatientComponent} from './components/patient/patient.component';
 import { AddMaterialComponent } from './components/material/add-material/add-material.component';
 import { UpdateMaterialComponent } from './components/material/update-material/update-material.component';
 import { AfficherMaterialComponent } from './components/material/afficher-material/afficher-material.component';
-import {PatientService} from "./service/patient.service";
 import { AddUtilisateurComponent } from './components/utilisateur/add-utilisateur/add-utilisateur.component';
 import { UpdateUtilisateurComponent } from './components/utilisateur/update-utilisateur/update-utilisateur.component';
 import { AfficherUtilisateurComponent } from './components/utilisateur/afficher-utilisateur/afficher-utilisateur.component';
+import { AddReactifComponent } from './components/reactif/add-reactif/add-reactif.component';
+import { UpdateReactifComponent } from './components/reactif/update-reactif/update-reactif.component';
+import { AfficherReactifComponent } from './components/reactif/afficher-reactif/afficher-reactif.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import { AfficherUtilisateurComponent } from './components/utilisateur/afficher-
     AddTypeComponent,
     AddPatientComponent,
     UpdateTypeComponent,
-    UpdatePatientComponent, PatientComponent, AddMaterialComponent, UpdateMaterialComponent, AfficherMaterialComponent, AddUtilisateurComponent, UpdateUtilisateurComponent, AfficherUtilisateurComponent
+    UpdatePatientComponent, PatientComponent, AddMaterialComponent, UpdateMaterialComponent, AfficherMaterialComponent, AddUtilisateurComponent, UpdateUtilisateurComponent, AfficherUtilisateurComponent, AddReactifComponent, UpdateReactifComponent, AfficherReactifComponent
   ],
   imports: [
     BrowserModule,
