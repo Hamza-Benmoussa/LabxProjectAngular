@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ReactifService} from "../../../service/reactif.service";
 
 @Component({
   selector: 'app-afficher-reactif',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AfficherReactifComponent implements OnInit {
 
-  constructor() { }
+  reactifs =[];
+  constructor(private serviceReactif : ReactifService) { }
 
   ngOnInit(): void {
+    this.getReactifs();
+  }
+
+  getReactifs(){
+    this.serviceReactif.getReactifs().subscribe((res)=>{
+      this.reactifs=res;
+    })
+  }
+
+  deleteReactif(id:number){
+    this.serviceReactif.deleteReactif(id).subscribe((res) =>{
+      this.getReactifs();
+    })
   }
 
 }

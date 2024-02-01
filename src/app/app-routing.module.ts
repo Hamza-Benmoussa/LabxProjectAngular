@@ -24,6 +24,9 @@ import {UpdateMaterialComponent} from "./components/material/update-material/upd
 import {AddMaterialComponent} from "./components/material/add-material/add-material.component";
 import {AfficherMaterialComponent} from "./components/material/afficher-material/afficher-material.component";
 import {PatientComponent} from "./components/patient/patient.component";
+import {AfficherReactifComponent} from "./components/reactif/afficher-reactif/afficher-reactif.component";
+import {AddReactifComponent} from "./components/reactif/add-reactif/add-reactif.component";
+import {UpdateReactifComponent} from "./components/reactif/update-reactif/update-reactif.component";
 
 const routes: Routes = [
   {path : "type-analyse" , component : TypeAnalyseComponent},
@@ -37,6 +40,9 @@ const routes: Routes = [
   {path:"update-test" , component :UpdateTestComponent},
   {path:"details-test" , component :DetailsTestComponent},
   {path : "analyse" , component : AnalyseComponent},
+  {path : "afficher-reactif" , component : AfficherReactifComponent},
+  {path : "add-reactif" , component : AddReactifComponent},
+  {path : "update-reactif/:id" , component : UpdateReactifComponent},
   {path:"add-analyse" , component :AddAnalyseComponent},
   {path : "echantillon" , component : EchantillonComponent},
   {path:"add-echantillon" , component :AddEchantillonComponent},
