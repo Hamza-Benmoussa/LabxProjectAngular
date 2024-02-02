@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <button (click)="updateUtilisateur()" class="btn btn-primary">Modifier</button>
+    <button (click)="updateUtilisateur()" class="btn btn-primary" [disabled]="updateUtilisateurForm.invalid">Modifier</button>
   </div>
   <div class="text-end mb-3" style="margin-bottom: 8px;padding-bottom: 0px;"></div>
 </form>

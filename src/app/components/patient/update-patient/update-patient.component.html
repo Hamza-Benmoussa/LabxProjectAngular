@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <button (click)="updatePatient()" class="btn btn-primary">Modifier</button>
+      <button (click)="updatePatient()" class="btn btn-primary" [disabled]="updatePatientForm.invalid">Modifier</button>
     </div>
   </form>
 </div>
