@@ -1,14 +1,10 @@
-import {Echantillon} from "./Echantillon";
+import {EchantillonRequest} from "./EchantillonRequest";
+import {MaterialEchan} from "./MaterialEchan";
 
 export interface EchantillonMaterial {
-  echantillon: Echantillon;
-  materielEchan: {
-    id: number;
-    nomEchan: string;
-    quantiteStockEhcna: number;
-    dateExpirationEchan: string;
-    fournisseurNom: string;
-  };
+  id:number;
+  echantillon: EchantillonRequest;
+  materielEchan:MaterialEchan;
   quantity: number;
 }
 

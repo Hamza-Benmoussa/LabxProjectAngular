@@ -1,0 +1,29 @@
+<form [formGroup]="updateNormeForm" >
+  <div class="card shadow mb-3" style="margin-right: 444px;margin-left: 326px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px;">
+    <div class="card-header py-3">
+      <p class="text-primary m-0 fw-bold">Ajouter Norme</p>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="description"><strong>description</strong></label>
+            <input class="form-control" type="text" id="description" placeholder="description" name="description" formControlName="description" required></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="min"><strong>min</strong></label>
+            <input class="form-control" type="number" id="min" placeholder="min" name="min" formControlName="min" required></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="max"><strong>max</strong></label>
+            <input class="form-control" type="number" id="max" placeholder="max" name="max" formControlName="max" required></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="unite"><strong>unite</strong></label>
+            <input class="form-control" type="text" id="unite" placeholder="unite" name="unite" formControlName="unite" required></div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit" style="margin-top: 10px;" (click)="updateNorme()" [disabled]="updateNormeForm.invalid" >Modifier</button>
+    </div>
+  </div>
+  <div class="text-end mb-3" style="margin-bottom: 8px;padding-bottom: 0px;"></div>
+</form>

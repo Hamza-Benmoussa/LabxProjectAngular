@@ -35,6 +35,9 @@ import { AfficherUtilisateurComponent } from './components/utilisateur/afficher-
 import { AddReactifComponent } from './components/reactif/add-reactif/add-reactif.component';
 import { UpdateReactifComponent } from './components/reactif/update-reactif/update-reactif.component';
 import { AfficherReactifComponent } from './components/reactif/afficher-reactif/afficher-reactif.component';
+import { AddNormeComponent } from './components/norme/add-norme/add-norme.component';
+import { UpdateNormeComponent } from './components/norme/update-norme/update-norme.component';
+import { AfficherNormeComponent } from './components/norme/afficher-norme/afficher-norme.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,21 @@ import { AfficherReactifComponent } from './components/reactif/afficher-reactif/
     AddTypeComponent,
     AddPatientComponent,
     UpdateTypeComponent,
-    UpdatePatientComponent, PatientComponent, AddMaterialComponent, UpdateMaterialComponent, AfficherMaterialComponent, AddUtilisateurComponent, UpdateUtilisateurComponent, AfficherUtilisateurComponent, AddReactifComponent, UpdateReactifComponent, AfficherReactifComponent
+    UpdatePatientComponent,
+    PatientComponent,
+    AddMaterialComponent,
+    UpdateMaterialComponent,
+    AfficherMaterialComponent,
+    AddUtilisateurComponent,
+    UpdateUtilisateurComponent,
+    AfficherUtilisateurComponent,
+    AddReactifComponent,
+    UpdateReactifComponent,
+    AfficherReactifComponent,
+    AddNormeComponent,
+    UpdateNormeComponent,
+    AfficherNormeComponent,
+
   ],
   imports: [
     BrowserModule,

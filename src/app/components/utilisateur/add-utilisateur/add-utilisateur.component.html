@@ -28,9 +28,9 @@
             </select>
             <label class="form-label" for="role">Sélectionner...</label>
           </div>
-        </div>
+        </div><button class="btn btn-primary btn-lg" type="submit" style="margin-top: 10px;" (click)="saveUtilisateur()" [disabled]="saveUtilisateurForm.invalid">Ajouter</button>
       </div>
-      </div><button class="btn btn-primary btn-lg" type="submit" style="margin-top: 10px;" (click)="saveUtilisateur()" [disabled]="saveUtilisateurForm.invalid">Ajouter</button>
+      </div>
     </div>
   <div class="text-end mb-3" style="margin-bottom: 8px;padding-bottom: 0px;"></div>
 </form>

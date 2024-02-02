@@ -32,36 +32,53 @@ import {
 } from "./components/utilisateur/afficher-utilisateur/afficher-utilisateur.component";
 import {AddUtilisateurComponent} from "./components/utilisateur/add-utilisateur/add-utilisateur.component";
 import {UpdateUtilisateurComponent} from "./components/utilisateur/update-utilisateur/update-utilisateur.component";
+import {AddNormeComponent} from "./components/norme/add-norme/add-norme.component";
+import {AfficherNormeComponent} from "./components/norme/afficher-norme/afficher-norme.component";
+import {UpdateNormeComponent} from "./components/norme/update-norme/update-norme.component";
 
 const routes: Routes = [
-  {path : "type-analyse" , component : TypeAnalyseComponent},
+
   {path : "patient" , component : PatientComponent},
   {path : "add-patient" , component : AddPatientComponent},
   {path : "update-patient/:id" , component : UpdatePatientComponent},
+
   {path:"add-type" , component :AddTypeComponent},
+  {path : "type-analyse" , component : TypeAnalyseComponent},
   {path:"update-type/:id" , component :UpdateTypeComponent},
+
   {path : "test-analyse" , component : TestAnalyseComponent},
   {path:"add-test" , component :AddTestComponent},
   {path:"update-test" , component :UpdateTestComponent},
   {path:"details-test" , component :DetailsTestComponent},
-  {path : "analyse" , component : AnalyseComponent},
+
+
   {path : "afficher-reactif" , component : AfficherReactifComponent},
   {path : "add-reactif" , component : AddReactifComponent},
   {path : "update-reactif/:id" , component : UpdateReactifComponent},
+
   {path:"add-analyse" , component :AddAnalyseComponent},
+  {path : "analyse" , component : AnalyseComponent},
+
   {path : "echantillon" , component : EchantillonComponent},
   {path:"add-echantillon" , component :AddEchantillonComponent},
   {path:"update-echantillon/:id" , component :UpdateEchantillonComponent},
   {path:"details-echantillon" , component :DetailsEchantillonComponent},
-  {path:"update-material/:id" , component:UpdateMaterialComponent},
+
   {path : "planification" , component : PlanificationComponent},
   {path:"add-planification" , component :AddPlanificationComponent},
   {path:"update-planification" , component :UpdatePlanificationComponent},
+
   {path:"add-material" , component :AddMaterialComponent},
   {path:"afficher-material" , component :AfficherMaterialComponent},
+  {path:"update-material/:id" , component:UpdateMaterialComponent},
+
   {path:"afficher-utilisateur" , component :AfficherUtilisateurComponent},
   {path:"add-utilisateur" , component :AddUtilisateurComponent},
   {path:"update-utilisateur/:id" , component :UpdateUtilisateurComponent},
+
+  {path:"add-norme" , component :AddNormeComponent},
+  {path:"afficher-norme" , component :AfficherNormeComponent},
+  {path:"update-norme/:id" , component :UpdateNormeComponent},
 
   {path : "" , component : HomeComponent},
   {path : "nav" , component : NavComponent},
