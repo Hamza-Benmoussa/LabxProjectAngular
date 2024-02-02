@@ -1,1 +1,37 @@
-<p>update-utilisateur works!</p>
+<form [formGroup]="updateUtilisateurForm" >
+  <div class="card shadow mb-3" style="margin-right: 444px;margin-left: 326px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px;">
+    <div class="card-header py-3">
+      <p class="text-primary m-0 fw-bold">Ajouter Utlisateur</p>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="nom"><strong>Nom</strong></label>
+            <input class="form-control" type="text" id="nom" placeholder="nom" name="nom" formControlName="nom" required></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="email"><strong>Email</strong></label>
+            <input class="form-control" type="text" id="email" placeholder="Email" name="email" formControlName="email" required ></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3"><label class="form-label" for="motDePasse"><strong>Password</strong></label>
+            <input class="form-control" type="text" id="motDePasse" placeholder="Password" name="motDePasse" formControlName="motDePasse" required></div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xxl-12">
+          <div class="mb-3">
+            <label class="form-label" for="role"><strong>Role</strong></label>
+          </div>
+          <div id="floating-label-1" class="form-floating mb-3">
+            <!-- Utilisation de *ngFor pour générer les options du menu déroulant -->
+            <select class="form-select form-select" id="role" formControlName="role">
+              <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+            </select>
+            <label class="form-label" for="role">Sélectionner...</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="updateUtilisateur()" class="btn btn-primary">Modifier</button>
+  </div>
+  <div class="text-end mb-3" style="margin-bottom: 8px;padding-bottom: 0px;"></div>
+</form>

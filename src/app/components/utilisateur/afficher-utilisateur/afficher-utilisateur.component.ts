@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UtilisateurService} from "../../../service/utilisateur.service";
 
 @Component({
   selector: 'app-afficher-utilisateur',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AfficherUtilisateurComponent implements OnInit {
 
-  constructor() { }
+  utilisateurs = [];
+  constructor(private serviceUtilisateur : UtilisateurService) { }
 
   ngOnInit(): void {
+    this.getUtilisateur();
+  }
+
+  getUtilisateur(){
+    this.serviceUtilisateur.getUtilisateurs().subscribe((res) =>{
+      this.utilisateurs=res;
+    })
+  }
+
+  deleteUtilisateur(id : number){
+    this.serviceUtilisateur.deleteUtilisateur(id).subscribe((res)=>{
+      this.getUtilisateur();
+    })
   }
 
 }

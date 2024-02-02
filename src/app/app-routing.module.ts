@@ -27,6 +27,11 @@ import {PatientComponent} from "./components/patient/patient.component";
 import {AfficherReactifComponent} from "./components/reactif/afficher-reactif/afficher-reactif.component";
 import {AddReactifComponent} from "./components/reactif/add-reactif/add-reactif.component";
 import {UpdateReactifComponent} from "./components/reactif/update-reactif/update-reactif.component";
+import {
+  AfficherUtilisateurComponent
+} from "./components/utilisateur/afficher-utilisateur/afficher-utilisateur.component";
+import {AddUtilisateurComponent} from "./components/utilisateur/add-utilisateur/add-utilisateur.component";
+import {UpdateUtilisateurComponent} from "./components/utilisateur/update-utilisateur/update-utilisateur.component";
 
 const routes: Routes = [
   {path : "type-analyse" , component : TypeAnalyseComponent},
@@ -54,6 +59,10 @@ const routes: Routes = [
   {path:"update-planification" , component :UpdatePlanificationComponent},
   {path:"add-material" , component :AddMaterialComponent},
   {path:"afficher-material" , component :AfficherMaterialComponent},
+  {path:"afficher-utilisateur" , component :AfficherUtilisateurComponent},
+  {path:"add-utilisateur" , component :AddUtilisateurComponent},
+  {path:"update-utilisateur/:id" , component :UpdateUtilisateurComponent},
+
   {path : "" , component : HomeComponent},
   {path : "nav" , component : NavComponent},
 ];
