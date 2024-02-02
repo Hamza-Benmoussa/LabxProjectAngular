@@ -1,0 +1,5 @@
+export enum StatusAnalyse{
+  EN_ATTENTE ='EN_ATTENTE',
+  EN_COURS_ANALYSE ='EN_COURS_ANALYSE',
+  TERMINE = 'TERMINE'
+}
