@@ -22,8 +22,8 @@ export class EchantillonService {
     return this.http.get<Echantillon[]>(baseUrl);
   }
 
-  updateEchantillon(id: number, echantillon : Echantillon): Observable<Echantillon> {
-    return this.http.put<Echantillon>(`${baseUrl}/${id}`, echantillon);
+  updateEchantillon(id: number, echantillon : EchantillonRequest): Observable<EchantillonRequest> {
+    return this.http.put<EchantillonRequest>(`${baseUrl}/${id}`, echantillon);
   }
 
   getEchantillonById(id: number): Observable<Echantillon> {
