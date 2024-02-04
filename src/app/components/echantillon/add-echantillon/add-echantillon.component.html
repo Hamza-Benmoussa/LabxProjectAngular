@@ -1,0 +1,45 @@
+<form [formGroup]="echantillonForm">
+  <div class="mb-3">
+    <label for="nomAnalyse" class="form-label">Nom Analyse</label>
+    <input type="text" class="form-control" id="nomAnalyse" formControlName="nomAnalyse" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="patient" class="form-label">Patient</label>
+    <select class="form-select" id="patient" formControlName="patient" required>
+      <option *ngFor="let patient of patients" [ngValue]="patient">{{ patient.nom }}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="utilisateurPreleveur" class="form-label">Utilisateur Preleveur</label>
+    <select class="form-select" id="utilisateurPreleveur" formControlName="utilisateurPreleveur" required>
+      <option *ngFor="let utilisateur of utilisateurs" [ngValue]="utilisateur">{{ utilisateur.nom }}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="datePrelevement" class="form-label">Date Prélèvement</label>
+    <input type="date" class="form-control" id="datePrelevement" formControlName="datePrelevement" required>
+  </div>
+
+  <div>
+      <div >
+        <div class="mb-3">
+          <label for="material" class="form-label">Material:</label>
+          <select class="form-select" id="material" formControlName="material" required>
+            <option *ngFor="let material of materials" [ngValue]="material">{{ material.nomechan }}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="quantity" class="form-label">Quantity:</label>
+          <input type="number" class="form-control" id="quantity" formControlName="quantity" required/>
+        </div>
+      </div>
+    </div>
+
+  <button type="button" class="btn btn-primary" (click)="addMaterial()">Add Material</button>
+
+  <button type="submit" class="btn btn-success" (click)="onSubmit()">Ajouter</button>
+</form>

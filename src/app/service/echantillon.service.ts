@@ -2,38 +2,36 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { EchantillonRequest } from "../entity/EchantillonRequest";
-import { Patient } from "../entity/Patient";
-import { MaterialEchan } from "../entity/MaterialEchan";
-import {Utilisateur} from "../entity/Utilisateur";
+import {Echantillon} from "../entity/Echantillon";
 
+const baseUrl="http://localhost:8080/api/echantillons";
 @Injectable({
   providedIn: 'root'
 })
 export class EchantillonService {
-  private url = "http://localhost:8080/api/echantillons";
 
   constructor(private http: HttpClient) { }
 
-  saveEchantillon(echantillon: EchantillonRequest): Observable<EchantillonRequest> {
-    console.log(echantillon);
-    return this.http.post<EchantillonRequest>(`${this.url}`, echantillon);
+  saveEchantillon(echantillonRequest: EchantillonRequest): Observable<EchantillonRequest> {
+    console.log(echantillonRequest);
+    return this.http.post<EchantillonRequest>(baseUrl, echantillonRequest);
   }
 
 
-  getEchantillon(): Observable<EchantillonRequest[]> {
-    return this.http.get<EchantillonRequest[]>(`${this.url}`);
+  getEchantillon(): Observable<Echantillon[]> {
+    return this.http.get<Echantillon[]>(baseUrl);
   }
 
-  updateEchantillon(id?: number, echantillon?: any): Observable<any> {
-    return this.http.put(`${this.url}/${id}`, echantillon);
+  updateEchantillon(id: number, echantillon : Echantillon): Observable<Echantillon> {
+    return this.http.put<Echantillon>(`${baseUrl}/${id}`, echantillon);
   }
 
-  getEchantillonById(id: number): Observable<EchantillonRequest[]> {
-    return this.http.get<EchantillonRequest[]>(`${this.url}/${id}`);
+  getEchantillonById(id: number): Observable<Echantillon> {
+    return this.http.get<Echantillon>(`${baseUrl}/${id}`);
   }
 
 
   deleteEchantillon(id: number): Observable<any> {
-    return this.http.delete<EchantillonRequest>(`${this.url}/${id}`);
+    return this.http.delete<EchantillonRequest>(`${baseUrl}/${id}`);
   }
 }
